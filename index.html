@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Proyecto Final</title>
+        <link rel="stylesheet" type="text/css"  href="style.css"> <!-- Archivo CSS -->
+        
+
+        <!-- Enlaces para la tipografía -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <main>
+
+            <form action="" class="formulario" id="formulario"> <!--Action se deja vacío porque la información no se envía a ninguna parte  -->
+
+                <h1>Create Account</h1>
+
+                <!-- Grupo: Nombre -->
+
+                <div class="formulario_grupo" id="grupo_nombre">
+                    <label for="nombre" class="formulario_label"> Nombre </label>
+                    <div class="formulario_grupo-input">
+                        <input type ="text" class="formulario_input" name="nombre" id="nombre" required>
+                        <div id="validar_nombre"><div>
+                    </div>
+                </div>            
+                <p id="error_nombre" class="error_comun"></p>
+                    
+                                         
+
+                <!-- Grupo: Email -->
+
+                <div class="formulario_grupo" id="grupo_email">
+                    <label for="email" class="formulario_label"> Email </label>
+                    <div class="formulario_grupo-input">
+                        <input type ="email" class="formulario_input" name="email" id="email" required>
+                        <div id="validar_email"><div>
+                      <!--  <input type="email" name="correo" id="correo" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required/> la validacion tambien se puede hacer asi-->
+                    </div>
+                </div>
+               <p id="error_email" class="error_comun"></p>
+                    
+             
+
+                <!-- Grupo: Clave -->
+
+                <div class="formulario_grupo" id="grupo_clave">
+                    <label for="clave" class="formulario_label"> Clave </label>
+                    <div class="formulario_grupo-input">
+                        <input type ="password" class="formulario_input" minlength="8" name="clave" id="clave" required>
+                        <div id="validar_clave"><div>
+                    </div>
+                </div>
+                    <p id="error_clave" class="error_comun"></p>
+
+
+                <!-- Grupo: Confirmar Clave -->
+
+                <div class="formulario_grupo" id="grupo_confirmar">
+                    <label for="confirmar" class="formulario_label"> Confirme su clave </label>
+                    <div class="formulario_grupo-input">
+                        <input type ="password" class="formulario_input" name="confirmar" id="confirmar" required>
+                     <div id="validar_confirmar"><div>
+                    </div>
+                </div>
+                    <p id="error_confirmar" class="error_comun"></p>
+
+
+                <!-- Grupo: Botón Enviar -->
+                <div class="formulario_grupo formulario-enviar">
+                    <button onclick="Validar();return false;" class="formulario_enviar">ENVIAR</button>
+                </div>
+            </form>
+        </main>
+        <script src= "index.js"></script> <!-- Archivo JS -->
+    </body>
+</html>
